@@ -222,7 +222,7 @@ include 'init.php';
 											</div>
 											<div class="form-group col-md-12">
 												<label class="label-img" for="image">
-													<img src="images_upload/default-image.png" id="image-field">
+													<img src="images_default/default-image.png" id="image-field">
 													<span class="before">
 														<i class="fa fa-camera"></i>
 														<p>Select Photo</p>
@@ -380,7 +380,6 @@ include 'init.php';
 
 	$(document).on('click', '#delete', function (e) {
 		e.preventDefault();
-		// confirm('Are you sure you want delete post ?');
 		var id = $(this).attr("href");
 		$.ajax({
 			url:"delete.php",
