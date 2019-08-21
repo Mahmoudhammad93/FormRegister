@@ -114,7 +114,7 @@ include 'init.php';
 												<img src="images_upload/<?php echo $row['Image'] ?>">
 											</div>
 											<div class="options">
-												<a href="<?php echo $row['ID'] ?>" id="delete" class="btn btn-danger">
+												<a href="<?php echo $row['ID'] ?>" id="delete" class="btn btn-danger"  data-toggle="tooltip" data-placement="left" title="Delete">
 													<i class="fa fa-trash"></i>
 												</a>
 											</div>

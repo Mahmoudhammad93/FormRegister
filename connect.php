@@ -1,6 +1,6 @@
 <?php
 
-	$dsn 	= "mysql:host=localhost;dbname=test_project";
+	$dsn 	= "mysql:host=localhost;dbname=form_register";
 	$user 	= "root";
 	$pass 	= "";
 	$option = array(
