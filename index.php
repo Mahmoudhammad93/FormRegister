@@ -4,7 +4,7 @@ include 'init.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Form For Test</title>
+	<title>Form Register</title>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
