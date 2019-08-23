@@ -130,7 +130,8 @@ body{
 
 /*-- Start Form --*/
 
-.custom-alert {
+.custom-alert,
+.c_pass_alert {
   display: none;
   margin-top: 10px;
   border-radius: 0;

@@ -208,6 +208,12 @@ include 'init.php';
 										          </button>
 										          <strong> Oh snap! </strong> Password Must Be Larger Than 6 charcters
 										        </div>
+										        <div class="alert alert-danger alert-dismissible c_pass_alert">
+										          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										            <span aria-hidden="true">&times;</span>
+										          </button>
+										          <strong> Oh snap! </strong> Confirm password not match with password
+										        </div>
 											</div>
 											<div class="form-group col-md-12">
 												<input class="form-control address" type="text" name="address" placeholder="Address">
@@ -315,18 +321,23 @@ include 'init.php';
 
         } else {
 
-            $(this).css('border-bottom', '1px solid #47c347').parent().find('.custom-alert').fadeOut(200)
-            .end().find('.asterisx').fadeOut(100).end().find('.fa-check').fadeIn(100);
+        	if ($('.c_pass').val() !== $('.pass').val()) {
+        		$('.c_pass').css('border-bottom', '1px solid #ff7171');
+	            $('.c_pass').parents('.form-group').find('.c_pass_alert').fadeIn(200)
+	            .end().find('.asterisx').fadeIn(100).end().find('.fa-check').fadeOut(100);
+        	}else{
 
-            fnameError   		= false,
-	        lnameError  		= false,
-	        emailError  		= false,
-	        passError  			= false,
-	        c_passError  		= false,
-	        addressError 		= false;
+	            $(this).css('border-bottom', '1px solid #47c347').parent().find('.custom-alert, .c_pass_alert').fadeOut(200)
+	            .end().find('.asterisx').fadeOut(100).end().find('.fa-check').fadeIn(100);
 
+	            fnameError   		= false,
+		        lnameError  		= false,
+		        emailError  		= false,
+		        passError  			= false,
+		        c_passError  		= false,
+		        addressError 		= false;
+		    }
         }
-
     });
 
 
@@ -336,6 +347,7 @@ include 'init.php';
 			e.preventDefault();
 			// Ajax Function To Get Info From Another Files
 			$('.fname, .lname, .email, .pass, .c_pass, .address').blur();
+			$('')
 			swal({
               	title: "Oops",
               	type:"warning",
